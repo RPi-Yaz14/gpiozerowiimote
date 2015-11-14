@@ -1,6 +1,9 @@
 import RPi.GPIO as GPIO                    
-import time                              
+import time                
+from gpiozero import RyanteckRobot
+robot = RyanteckRobot()
 GPIO.setmode(GPIO.BCM)
+
 
 TRIG = 24 #Change to match GPIO pins used
 ECHO = 25
@@ -22,7 +25,12 @@ while True:
     while GPIO.input(ECHO) == 1:
         pulse_end = time.time()
 
+
     pulse_length = pulse_end - pulse_start
     distance = pulse_length * 17150
 
     print(distance)
+if distance >= 5:
+    robot.forward()
+else:
+    robot.stop()
