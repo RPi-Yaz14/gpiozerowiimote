@@ -17,5 +17,5 @@ while True:
                 print("left")
                 robot.left()
         if GPIO.input(26) !=  0:
-                print("right")
+                print("hacktoberfest 4 tshirt")
                 robot.right()
