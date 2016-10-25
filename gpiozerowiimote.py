@@ -36,5 +36,3 @@ while True:
     if (buttons & cwiid.BTN_DOWN):
          robot.backward(speed)
 
-    if (buttons & cwiid.BTN_B):
-         robot.stop()
