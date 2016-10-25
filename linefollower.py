@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 from gpiozero import RyanteckRobot
 robot = RyanteckRobot()
 
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
 
 GPIO.setup(21, GPIO.IN) # Left
